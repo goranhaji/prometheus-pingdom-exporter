@@ -46,7 +46,7 @@ var (
 func init() {
 	RootCmd.AddCommand(serverCmd)
 
-	serverCmd.Flags().IntVar(&waitSeconds, "wait", 30, "time (in seconds) between accessing the Pingdom  API")
+	serverCmd.Flags().IntVar(&waitSeconds, "wait", 60, "time (in seconds) between accessing the Pingdom  API")
 	serverCmd.Flags().IntVar(&port, "port", 8000, "port to listen on")
 
 	prometheus.MustRegister(pingdomUp)
